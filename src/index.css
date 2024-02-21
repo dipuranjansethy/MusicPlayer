@@ -1,15 +1,14 @@
 /* General styling for the audio-player container */
+
 body{
-  background: linear-gradient(to right, #e88da1, #dfc8b6);
+  /* background: linear-gradient(to right, #0b0b0b, #302e2d); */
+  background: linear-gradient(to right, #0b0b0b, #302e2d); 
 }
 .audio-player-container {
   display: flex;
   justify-content: center;
   padding: 2rem 0;
-}
-
-/* Styling for the audio-player div */
-.audio-player {
+}.audio-player {
   z-index: 0;
   display: flex;
   flex-direction: row;
@@ -18,24 +17,13 @@ body{
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
+  font-family: 'roboto';
   margin: 0 auto;
-  background: linear-gradient(to right, #db1641, #cfa787);
+  background: rgba(255, 255, 255, 0.1); /* Background color with opacity */
+  backdrop-filter: blur(10px); /* Apply background blur */
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(57, 145, 210, 0.3);
-}
-
-/* Styling for the playeraudioname div inside audio-player */
-.playeraudioname {
-  background: transparent;
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(57, 145, 210, 0.3);
-  padding: 20px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1), 0 0 10px rgba(255, 255, 255, 0.1); /* Box shadow for glass effect */
+  border: 1px solid rgba(245, 248, 250, 0.3);
 }
 
 /* Styling for the image inside audio-player */
@@ -45,7 +33,28 @@ body{
   border-radius: 50%;
   object-fit: cover;
   margin-right: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Border for the glass effect */
 }
+
+/* Styling for the playeraudioname div inside audio-player */
+.playeraudioname {
+  background: transparent;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(243, 244, 244, 0.3);
+  padding: 20px;
+}
+
+/* Styling for the image inside audio-player */
+/* .audio-player img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+} */
 
 /* Styling for the file input */
 
@@ -112,14 +121,21 @@ audio {
   border: none;
   height: 100%;
   color: black;
-  background: linear-gradient(to right, #e34366, #cfa787);
+  /* background: linear-gradient(to right, #dad0d2, #cfa787);
+  background: linear-gradient(to right, #1c1b1b, #a09f9f);
+   */
+  background: linear-gradient(to right, #878484, #a09f9f);
+  color: white;
+
   
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
-
+.file-input:hover {
+  background: rgba(255, 255, 255, 0.15); /* Adjust background color on hover */
+}
 /* Styling for the add to playlist button */
 .addtoplaylist {
   padding: 13px;
@@ -133,7 +149,10 @@ audio {
   max-width: 600px;
 }
 .addtoplaylist:hover {
-  background: linear-gradient(to right, #e34366, #cfa787);
+  /* background: linear-gradient(to right, #e34366, #cfa787);
+   */
+  background: linear-gradient(to right, #1c1b1b, #a09f9f);
+
   color: white;
 }
 /* Styling for the uploading span */
@@ -186,8 +205,10 @@ audio {
 
 /* Styling for highlighted playlist item */
 .playlist-item.highlighted {
-  background: linear-gradient(to right, #e34366, #cfa787);
-  color: black;
+  /* background: linear-gradient(to right, #e34366, #cfa787); */
+  background: linear-gradient(to right, #1c1b1b, #a09f9f);
+
+  color: white;
 }
 .smt{
   background: linear-gradient(to right, #e34366, #dcac85);

@@ -136,7 +136,7 @@ const AudioPlayer = () => {
 
   return (
     <>
-        <h1  style={{ fontSize: "50px", textAlign:"center",color:"#e0506a" }}>Audio Player</h1>
+        <h1  style={{ fontSize: "50px", textAlign:"center",color:"white" }}>Audio Player</h1>
         <div className="audio-player-container">
       <div className="audio-player">
         <img src={photo} alt="img" style={{ padding: "20px" }} />
@@ -181,7 +181,7 @@ const AudioPlayer = () => {
 
       </>
 
-      <h1 style={{textAlign: "center"}}>Playlist</h1>
+      <h1 style={{textAlign: "center" ,color:"white"}} >Playlist</h1>
       <div className="playlist">
         {data &&
           data.map((item, index) => (
