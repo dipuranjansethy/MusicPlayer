@@ -2,7 +2,7 @@
 
 body{
   /* background: linear-gradient(to right, #0b0b0b, #302e2d); */
-  background: linear-gradient(to right, #0b0b0b, #302e2d); 
+  background-color:rgb(22, 22, 22); 
 }
 .audio-player-container {
   display: flex;

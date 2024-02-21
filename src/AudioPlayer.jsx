@@ -12,16 +12,14 @@ const AudioPlayer = () => {
   const audioRef = useRef();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  // const [currentSong,setCurrentSong]=useState(0)
+  
 
   useEffect(() => {
     const handleBeforeUnload = () => {
-      // Save the current index to local storage before unloading
       localStorage.setItem("current_song", currentIndex);
     };
 
     const handleLoad = () => {
-      // Retrieve the current index from local storage on page load
       const savedIndex = localStorage.getItem("current_song");
       if (savedIndex !== null) {
         setCurrentIndex(parseInt(savedIndex, 10));
@@ -46,7 +44,6 @@ const AudioPlayer = () => {
   }, [currentIndex, playlist]);
   const onChangeHandler = async (e) => {
     const file = e.target.files[0];
-
     try {
       setLoading(true);
       const res = await uploadAudio(file);
@@ -58,14 +55,6 @@ const AudioPlayer = () => {
       alert("something went wrong... while uploading");
       console.log("errrrrr", error);
     }
-
-    // if (file) {
-    //   const newTrack = {
-    //     id: Date.now(),
-    //     name: file.name,
-    //     file,
-    //   };
-    // }
   };
 
   const addToPlaylist = () => {
@@ -73,10 +62,6 @@ const AudioPlayer = () => {
     audio &&
       localStorage.setItem("playlist", JSON.stringify([...playlist, audio]));
   };
-
-  // console.log("playlist", playlist);
-  // console.log("audio", audio);
-
   const playAudio = (file, index) => {
     localStorage.setItem("current_song", index);
     console.log(index);
@@ -84,7 +69,7 @@ const AudioPlayer = () => {
     console.log(file);
     audioRef.current.currentTime = JSON.parse(
       localStorage.getItem("currentPlayingTime")
-    ); // Set the starting time to 2 minutes (120 seconds)
+    ); 
     audioRef.current.play();
     setCurrentIndex(index);
     setHighlightedIndex(index);
@@ -92,19 +77,18 @@ const AudioPlayer = () => {
 
   const data = JSON.parse(localStorage.getItem("playlist"));
   console.log("data", data);
-  // console.log(counter);
+
 
   const handleEnded = () => {
     if (currentIndex < data.length - 1) {
       const nextIndex = currentIndex + 1;
-      // localStorage.setItem("current_song",currentIndex)
       setCurrentIndex(nextIndex);
       setCounter(0);
       localStorage.setItem("currentPlayingTime", "0");
       playAudio(data[nextIndex].audio_url, nextIndex);
       console.log(nextIndex);
     } else {
-      // If it's the last song, go back to the first song
+
       setCurrentIndex(0);
       setCounter(0);
       localStorage.setItem("current_song", "0");
