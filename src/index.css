@@ -1,0 +1,110 @@
+/* *{
+  background-color: #282828;
+} */
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #282828;
+  padding: 0px;
+  border-radius: 10px;
+  color: #f5f5f5;
+  width: full;
+}
+
+.audio-player h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.audio-player input {
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  
+}
+
+.playlist {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 20px;
+  
+
+
+}
+
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+}
+
+.playlist-item:hover {
+  background-color: #383838;
+}
+
+.playlist-item button {
+  background-color: #f5f5f5;
+  color: #282828;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.playlist-item button:hover {
+  background-color: #282828;
+  color: #f5f5f5;
+}
+.playlist-item.current-audio {
+  background-color: #4b0082;
+  color: #f5f5f5;
+}
+
+.playlist-item.current-audio button {
+  background-color: #f5f5f5;
+  color: #282828;
+}
+
+.playlist-item.current-audio button:hover {
+  background-color: #282828;
+  color: #f5f5f5;
+}
+.playlist-item.highlighted {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.addtoplaylist{
+  background-color: #e0e0e0;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgba(255, 255, 255, 0.395);
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: #282828;
+}
+
+/* &::-webkit-file-upload-button{
+  cursor:pointer;
+  margin-left:-5%;
+  width:110%,;
+  border:none,;
+  height:100%,;
+  color:#ECC948,;
+  background-color:white;
+} */
+  
+
+
