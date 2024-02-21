@@ -29,7 +29,7 @@ body{
 
 /* Styling for the playeraudioname div inside audio-player */
 .playeraudioname {
-  background: linear-gradient(to right, #e34366, #cfa787);
+  background: transparent;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
