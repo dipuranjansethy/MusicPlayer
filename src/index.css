@@ -1,54 +1,200 @@
-/* *{
-  background-color: #282828;
-} */
+/* General styling for the audio-player container */
+body{
+  background: linear-gradient(to right, #e88da1, #dfc8b6);
+}
+.audio-player-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+/* Styling for the audio-player div */
 .audio-player {
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(to right, #db1641, #cfa787);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(57, 145, 210, 0.3);
+}
+
+/* Styling for the playeraudioname div inside audio-player */
+.playeraudioname {
+  background: linear-gradient(to right, #e34366, #cfa787);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(57, 145, 210, 0.3);
+  padding: 20px;
+}
+
+/* Styling for the image inside audio-player */
+.audio-player img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+/* Styling for the file input */
+
+
+/* Styling for the audio element */
+audio {
+  margin-top: 1rem;
+  max-width: 100%;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .audio-player {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .audio-player img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  audio {
+    margin-top: 1rem;
+  }
+}.upload-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .upload-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .file-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .add-to-playlist-button {
+    width: 100%;
+  }
+}
+/* Styling for the input container */
+.input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #282828;
-  padding: 0px;
-  border-radius: 10px;
-  color: #f5f5f5;
-  width: full;
 }
 
-.audio-player h1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.audio-player input {
-  margin-bottom: 20px;
-  color: #e0e0e0;
+/* Styling for the file input */
+.file-input {
+  cursor: pointer;
+  width: 80%;
+  max-width: 580px;
+  border: none;
+  height: 100%;
+  color: black;
+  background: linear-gradient(to right, #e34366, #cfa787);
   
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Styling for the add to playlist button */
+.addtoplaylist {
+  padding: 13px;
+  border-radius: 10px;
+  background-color: white; /* Update the background color */
+  color: black;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+}
+.addtoplaylist:hover {
+  background: linear-gradient(to right, #e34366, #cfa787);
+  color: white;
+}
+/* Styling for the uploading span */
+.uploading-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the uploading text */
+.uploading-text {
+  margin-left: 5px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens */
+  .input-container {
+    align-items: center;
+  }
+
+  .file-input {
+    width: 100%;
+  }
+
+  .addtoplaylist {
+    width: 100%;
+  }
+}
+/* Styling for the playlist *//* Styling for the playlist */
 .playlist {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin-bottom: 20px;
-  
-
-
+  background-color: white;
+  width: 80%; /* Set width to 80% */
+  max-width: 600px; /* Set maximum width to 600px */
+  margin: 0 auto; /* Center the playlist on the screen */
+  border-radius: 10px;
 }
 
+/* Styling for the playlist item */
 .playlist-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 10px;
   border-bottom: 1px solid #f5f5f5;
-  border: 1px solid #f5f5f5;
   border-radius: 10px;
 }
 
-.playlist-item:hover {
-  background-color: #383838;
+/* Styling for highlighted playlist item */
+.playlist-item.highlighted {
+  background: linear-gradient(to right, #e34366, #cfa787);
+  color: black;
+}
+.smt{
+  background: linear-gradient(to right, #e34366, #dcac85);
+
 }
 
+/* Styling for the Play button */
 .playlist-item button {
   background-color: #f5f5f5;
   color: #282828;
@@ -58,53 +204,34 @@
   cursor: pointer;
 }
 
+/* Styling for Play button on hover */
 .playlist-item button:hover {
   background-color: #282828;
   color: #f5f5f5;
 }
+
+/* Styling for current audio playlist item */
 .playlist-item.current-audio {
   background-color: #4b0082;
   color: #f5f5f5;
 }
 
+/* Styling for Play button in current audio playlist item */
 .playlist-item.current-audio button {
   background-color: #f5f5f5;
   color: #282828;
 }
 
+/* Styling for Play button hover in current audio playlist item */
 .playlist-item.current-audio button:hover {
   background-color: #282828;
   color: #f5f5f5;
 }
-.playlist-item.highlighted {
-  background-color: #e0e0e0;
-  color: black;
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens */
+  .playlist {
+    width: 100%; /* Full width for smaller screens */
+  }
 }
-
-.addtoplaylist{
-  background-color: #e0e0e0;
-}
-
-::-webkit-scrollbar{
-  width: 10px;
-}
-::-webkit-scrollbar-track{
-  background-color: rgba(255, 255, 255, 0.395);
-
-}
-::-webkit-scrollbar-thumb{
-  background-color: #282828;
-}
-
-/* &::-webkit-file-upload-button{
-  cursor:pointer;
-  margin-left:-5%;
-  width:110%,;
-  border:none,;
-  height:100%,;
-  color:#ECC948,;
-  background-color:white;
-} */
-  
-
-
