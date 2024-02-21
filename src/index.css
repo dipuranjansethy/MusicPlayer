@@ -1,55 +1,37 @@
-* {
-  box-sizing: border-box;
-}
-
+/* *{
+  background-color: #282828;
+} */
 .audio-player {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #282828;
-  padding: 20px;
+  padding: 0px;
   border-radius: 10px;
   color: #f5f5f5;
-  width: 100%;
-  max-width: 600px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the component */
+  width: full;
 }
 
 .audio-player h1 {
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 2rem;
 }
 
 .audio-player input {
   margin-bottom: 20px;
   color: #e0e0e0;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background-color: #282828;
-  color: #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-}
-
-.addtoplaylist {
-  background-color: #e0e0e0;
-  margin-top: -19px;
-  padding: 5px;
-  border-radius: 10px;
-  color: black;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  width: 100%;
+  
 }
 
 .playlist {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
+  margin-bottom: 20px;
+  
+
+
 }
 
 .playlist-item {
@@ -63,6 +45,10 @@
   border-radius: 10px;
 }
 
+.playlist-item:hover {
+  background-color: #383838;
+}
+
 .playlist-item button {
   background-color: #f5f5f5;
   color: #282828;
@@ -72,24 +58,53 @@
   cursor: pointer;
 }
 
-/* Add media queries for responsiveness */
-@media (max-width: 600px) {
-  .audio-player {
-    padding: 10px;
-  }
-
-  .audio-player h1 {
-    font-size: 1.5rem;
-  }
-
-  .audio-player input,
-  .addtoplaylist {
-    margin-top: 10px;
-  }
+.playlist-item button:hover {
+  background-color: #282828;
+  color: #f5f5f5;
+}
+.playlist-item.current-audio {
+  background-color: #4b0082;
+  color: #f5f5f5;
 }
 
-@media (max-width: 400px) {
-  .audio-player h1 {
-    font-size: 1.2rem;
-  }
+.playlist-item.current-audio button {
+  background-color: #f5f5f5;
+  color: #282828;
 }
+
+.playlist-item.current-audio button:hover {
+  background-color: #282828;
+  color: #f5f5f5;
+}
+.playlist-item.highlighted {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.addtoplaylist{
+  background-color: #e0e0e0;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgba(255, 255, 255, 0.395);
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: #282828;
+}
+
+/* &::-webkit-file-upload-button{
+  cursor:pointer;
+  margin-left:-5%;
+  width:110%,;
+  border:none,;
+  height:100%,;
+  color:#ECC948,;
+  background-color:white;
+} */
+  
+
+

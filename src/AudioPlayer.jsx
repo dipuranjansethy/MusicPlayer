@@ -137,17 +137,11 @@ const AudioPlayer = () => {
       <h1 style={{fontSize:"50px"}}>Audio Player</h1>
       <img src={photo} alt="img" style={{padding:"20px"}} />
       <br />
-      {
-            (
-              <>
                 <div style={{fontSize:"2rem"}}>Now Playing........</div>
                 <div style={{fontSize:"2rem"}}>{data && data[currentIndex].name}</div>
                 <br />
                 <audio ref={audioRef} onEnded={handleEnded} controls />
 
-              </>
-            )
-          }
           <br />
           <br />
           <br />
